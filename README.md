@@ -6,7 +6,7 @@ A mouse button swapping utility for Windows. Dedicated to all of you lefties and
 
 ## Installation
 
-Download the latest release `.zip` or use `npm`:
+Download the [latest](https://github.com/Nanofus/ambidextrous/releases/latest) release `.zip` or use `npm`:
 ```
 npm install ambidextrous
 ```
