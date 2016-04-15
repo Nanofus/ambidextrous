@@ -1,0 +1,27 @@
+{
+  "name": "ambidextrous",
+  "version": "0.0.1",
+  "description": "A mouse button swapping utility for Windows",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nanofus/ambidextrous.git"
+  },
+  "keywords": [
+    "mouse",
+    "button",
+    "mouse button",
+    "swapping",
+    "utility",
+    "windows"
+  ],
+  "author": "Ville Talonpoika <ville@talonpoika.net> (http://nanof.us/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nanofus/ambidextrous/issues"
+  },
+  "homepage": "https://github.com/Nanofus/ambidextrous#readme"
+}
