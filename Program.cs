@@ -2,6 +2,8 @@
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Diagnostics;
+using Shell32;
+using IWshRuntimeLibrary;
 
 namespace ambi {
     class Program {
@@ -24,9 +26,31 @@ namespace ambi {
                         StartListener();
                     } else if (arg == "hiddenListener") {
                         StartListen();
+                    } else if (arg == "startup") {
+                        if (args.Length > 1) {
+                            if (args[i + 1] == "remove") {
+                                RemoveStartup();
+                                break;
+                            }
+                        }
+                        SetStartup();
                     }
                 }
             }
+        }
+
+        static void SetStartup() {
+            var wsh = new IWshShell_Class();
+            IWshRuntimeLibrary.IWshShortcut shortcut = wsh.CreateShortcut(
+                Environment.GetFolderPath(Environment.SpecialFolder.Startup) + "\\Ambidextrous.lnk") as IWshRuntimeLibrary.IWshShortcut;
+            shortcut.TargetPath = Process.GetCurrentProcess().MainModule.FileName;
+            shortcut.Save();
+            Console.WriteLine("Added shortcut to Startup folder");
+        }
+
+        static void RemoveStartup() {
+            System.IO.File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.Startup) + "\\Ambidextrous.lnk");
+            Console.WriteLine("Removed shortcut from Startup folder");
         }
 
         static void StartListener() {
@@ -71,7 +95,10 @@ namespace ambi {
             Console.WriteLine();
             Console.WriteLine("Command line parameters:");
             Console.WriteLine("ambi - Swap the mouse buttons.");
+            Console.WriteLine("ambi listen - Start a background process that swaps on Alt+K.");
             Console.WriteLine("ambi path - Save Ambidextrous in your environment variables to call it from anywhere.");
+            Console.WriteLine("ambi startup - Start Ambidextrous when Windows starts.");
+            Console.WriteLine("ambi startup remove - Do not start Ambidextrous when Windows starts.");
             Console.WriteLine("ambi help - Show help. But you already knew this.");
         }
     }

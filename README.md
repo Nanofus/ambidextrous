@@ -1,5 +1,6 @@
 # ambidextrous
-A mouse button swapping utility for Windows. Dedicated to all of you lefties and ambidextrous people out there, who like to change your mouse-hand once in a while. Ambidextrous natively changes the Windows setting for primary mouse button.
+
+A mouse button swapping utility for Windows. Dedicated to all of you lefties and ambidextrous people out there, who like to change your mouse hand once in a while. Ambidextrous natively changes the Windows setting for primary mouse button.
 
 ## Installation
 
@@ -11,11 +12,23 @@ Save Ambidextrous in your environment variables to call it from anywhere:
 ```
 ambi path
 ```
+Set Ambidextrous to run at Windows startup:
+```
+ambi startup
+```
 
 ## Usage
 To swap the mouse buttons:
 ```
 ambi
+```
+To start a background listener that swaps the buttons on Alt+K (configurable in the future):
+```
+ambi listen
+```
+To stop Ambidextrous from running at Windows startup:
+```
+ambi startup remove
 ```
 To see information about the application:
 ```

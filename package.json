@@ -1,8 +1,8 @@
 {
   "name": "ambidextrous",
   "version": "0.0.1",
-  "description": "A mouse button swapping utility for Windows",
-  "main": "index.js",
+  "description": "Easily swap your mouse hand on Windows",
+  "main": "ambi.exe",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
