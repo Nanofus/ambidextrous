@@ -2,7 +2,7 @@
 
 [![GitHub release](https://img.shields.io/github/release/Nanofus/ambidextrous.svg)]() [![npm version](https://badge.fury.io/js/ambidextrous.svg)](https://badge.fury.io/js/ambidextrous)
 
-A mouse button swapping utility for Windows. Dedicated to all of you lefties and ambidextrous people out there, who like to change your mouse hand once in a while. Ambidextrous natively changes the Windows setting for primary mouse button.
+A mouse button swapping utility for Windows. Dedicated to all of you lefties and ambidextrous people out there, who like to change your mouse hand every once in a while. Ambidextrous natively changes the Windows setting for primary mouse button.
 
 ## Installation
 
